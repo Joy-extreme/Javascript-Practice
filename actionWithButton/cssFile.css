@@ -1,0 +1,18 @@
+
+.button
+{
+  border:none;
+  padding: 5px 10px 5px 10px;
+}
+#add-button
+{
+  border-radius: 5px;
+  background-color: green;
+}
+
+#substract-button
+{
+  border-radius: 5px;
+  background-color: red;
+}
+

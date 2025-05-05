@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="cssFile.css">
+<title>Action with button</title>
+</head>
+<body>
+    <button id="add-button" class="button" onclick="
+        num +=1;
+        document.querySelector('#num-box').value=num;
+        document.querySelector('#Result-showcase').innerHTML=` The result is ${num}`;"
+    > Add 1</button>
+    <input type="number" id="num-box">
+    <button id="substract-button" class="button" onclick=" 
+        num -=1;
+        document.querySelector('#num-box').value=num;
+        document.querySelector('#Result-showcase').innerHTML=` The result is ${num}`;"
+    > Substract 1</button>
+    <p id="Result-showcase"></p>
+    <script src="buttonAction.js"></script>
+
+
+    
+</body>
+</html>
