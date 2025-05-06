@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="RockPaperScissor.css">
+  <title>Rock Paper Scissor Game</title>
+</head>
+<body>
+  <h2>Welcome to Rock paper Scissor Game</h2>
+  <button id="rock-button" class="button" onclick="clickedRock()">Rock</button>
+  <button id="paper-button" class="button" onclick="clickedPaper()">Paper</button>
+  <button id="scissor-button" class="button" onclick="clickedScissor()">Scissor</button>
+  <p id="game-result"></p>
+  <script>
+    // let result= "Start to play";
+    document.querySelector('#game-result').innerText="Start the game";
+    function clickByComputer()
+    {
+      let randValue= Math.random()*3;
+      if(randValue>0 && randValue<=1)
+      {
+        return "Rock";
+      
+      }
+      else if(randValue>1 && randValue<=2)
+      {
+        return "Paper";
+      }
+      else
+      {
+        return "Scissor";
+      }
+    }
+    function clickedRock()
+    {
+      let valueGivenByComputer= clickByComputer();
+      let result='';
+      if(valueGivenByComputer=="Rock")
+      {
+        result= "Both of you have chosen 'Rock'. No winner.";
+      }
+      else if(valueGivenByComputer == "Scissor")
+      {
+        result= "You have chosen 'Rock' and Computer has chosen 'Scissor'. You are winner.";
+      }
+      else
+      {
+        result="You have chosen 'Rock' and Computer has chosen 'Paper'. You are loser.";
+      }
+      document.querySelector('#game-result').innerText=result;
+
+    }
+    function clickedPaper()
+    {
+      let valueGivenByComputer= clickByComputer();
+      let result='';
+      if(valueGivenByComputer=="Paper")
+      {
+        result= "Both of you have chosen 'Paper'. No winner.";
+      }
+      else if(valueGivenByComputer == "Scissor")
+      {
+        result= "You have chosen 'Paper' and Computer has chosen 'Scissor'. You are loser.";
+      }
+      else
+      {
+        result="You have chosen 'Paper' and Computer has chosen 'Rock'. You are winner.";
+      }
+      document.querySelector('#game-result').innerText=result;
+    }
+    function clickedScissor()
+    {
+      let valueGivenByComputer= clickByComputer();
+      let result='';
+      if(valueGivenByComputer=="Scissor")
+      {
+        result= "Both of you have chosen 'Scissor'. No winner.";
+      }
+      else if(valueGivenByComputer == "Paper")
+      {
+        result= "You have chosen 'Scissor' and Computer has chosen 'Paper'. You are winner.";
+      }
+      else
+      {
+        result="You have chosen 'Scissor' and Computer has chosen 'Rock'. You are loser.";
+      }
+      document.querySelector('#game-result').innerText=result;
+
+    }
+    
+  </script> 
+  
+</body>
+</html>
