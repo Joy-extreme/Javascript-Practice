@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="calculator.css">
+  <title>calculator</title>
+</head>
+<body>
+  <div id="calculator-div">
+    Calculator<br>
+    <input type="text" id="input-box" readonly>
+    <div id="buttons-div">
+      
+      <button id="button-C" class="button" onclick="
+      document.querySelector('#input-box').value=''">C</button>
+      <button id="button-1" class="button" onclick="
+      document.querySelector('#input-box').value +=1">1</button>
+      <button id="button-2" class="button" onclick="
+      document.querySelector('#input-box').value +=2">2</button>
+      <button id="button-add" class="button" onclick="
+      document.querySelector('#input-box').value +='+'">+</button>
+      <button id="button-3" class="button" onclick="
+      document.querySelector('#input-box').value +=3">3</button>
+      <button id="button-4" class="button" onclick="
+      document.querySelector('#input-box').value +=4">4</button>
+      <button id="button-sub" class="button" onclick="
+      document.querySelector('#input-box').value +='-'">-</button>
+      <button id="button-5" class="button" onclick="
+      document.querySelector('#input-box').value +=5">5</button>
+      <button id="button-6" class="button" onclick="
+      document.querySelector('#input-box').value +=6">6</button>
+      <button id="button-mul" class="button" onclick="
+      document.querySelector('#input-box').value +='*'">*</button>
+      <button id="button-7" class="button" onclick="
+      document.querySelector('#input-box').value +=7">7</button>
+      <button id="button-8" class="button" onclick="
+      document.querySelector('#input-box').value +=8">8</button>
+      <button id="button-divide" class="button" onclick="
+      document.querySelector('#input-box').value +='/'">/</button>
+      <button id="button-equalSign" class="button" onclick="
+      document.querySelector('#input-box').value = eval(document.querySelector('#input-box').value)">=</button>
+      <button id="button-9" class="button" onclick="
+      document.querySelector('#input-box').value +=9">9</button>
+      <button id="button-0" class="button" onclick="
+      document.querySelector('#input-box').value +=0">0</button>
+      <button id="button-decimal" class="button" onclick="
+      document.querySelector('#input-box').value +='.'">.</button>
+    </div>
+  </div>
+  <script>
+    let displayValue='';
+    document.querySelector('#input-box').value= displayValue;
+  </script>
+  
+</body>
+</html>
