@@ -18,6 +18,10 @@
       Win: 0,
       lose: 0,
       Tie: 0,
+      displayMatchSummary:function()
+      {
+        return " Total match played "+(this.Win+this.Tie+this.lose)+" where won:"+this.Win+" lose:"+this.lose+" tie:"+info.Tie;
+      }
     };
     document.querySelector('#game-result').innerText="Start the game";
     function clickByComputer()
@@ -39,7 +43,7 @@
     }
     function printResult(yourMove, computerMove, result)
     {
-      document.querySelector('#game-result').innerText="You have chosen "+yourMove+" and computer has chosen "+computerMove+". "+result+" Total match played "+(info.Win+info.Tie+info.lose)+" where won:"+info.Win+" lose:"+info.lose+" tie:"+info.Tie;
+      document.querySelector('#game-result').innerText="You have chosen "+yourMove+" and computer has chosen "+computerMove+". "+result+ info.displayMatchSummary();
     }
     function clickedRock()
     {
