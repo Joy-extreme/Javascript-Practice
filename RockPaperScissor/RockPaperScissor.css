@@ -1,0 +1,29 @@
+body
+{
+  text-align: center;
+}
+.button
+{
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  margin: 8px;
+  font-weight: bold;
+}
+#rock-button
+{
+  background-color: aqua;
+}
+#paper-button
+{
+  background-color: chartreuse;
+}
+#scissor-button
+{
+  background-color: coral;
+}
+#result
+{
+  font-weight: bold;
+  font-size: 20px;
+}
