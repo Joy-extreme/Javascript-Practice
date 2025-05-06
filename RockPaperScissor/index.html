@@ -13,7 +13,12 @@
   <button id="scissor-button" class="button" onclick="clickedScissor()">Scissor</button>
   <p id="game-result"></p>
   <script>
-    // let result= "Start to play";
+    let info=
+    {
+      Win: 0,
+      lose: 0,
+      Tie: 0,
+    };
     document.querySelector('#game-result').innerText="Start the game";
     function clickByComputer()
     {
@@ -32,23 +37,30 @@
         return "Scissor";
       }
     }
+    function printResult(yourMove, computerMove, result)
+    {
+      document.querySelector('#game-result').innerText="You have chosen "+yourMove+" and computer has chosen "+computerMove+". "+result+" Total match played "+(info.Win+info.Tie+info.lose)+" where won:"+info.Win+" lose:"+info.lose+" tie:"+info.Tie;
+    }
     function clickedRock()
     {
       let valueGivenByComputer= clickByComputer();
       let result='';
       if(valueGivenByComputer=="Rock")
       {
-        result= "Both of you have chosen 'Rock'. No winner.";
+        info.Tie++;
+        result= "Match is tied.";
       }
       else if(valueGivenByComputer == "Scissor")
       {
-        result= "You have chosen 'Rock' and Computer has chosen 'Scissor'. You are winner.";
+        info.Win++;
+        result= "You are winner.";
       }
       else
       {
-        result="You have chosen 'Rock' and Computer has chosen 'Paper'. You are loser.";
+        info.lose++;
+        result="You are loser.";
       }
-      document.querySelector('#game-result').innerText=result;
+      printResult('Rock', valueGivenByComputer, result);
 
     }
     function clickedPaper()
@@ -57,17 +69,20 @@
       let result='';
       if(valueGivenByComputer=="Paper")
       {
-        result= "Both of you have chosen 'Paper'. No winner.";
+        info.Tie++;
+        result= "Match is tied.";
       }
       else if(valueGivenByComputer == "Scissor")
       {
-        result= "You have chosen 'Paper' and Computer has chosen 'Scissor'. You are loser.";
+        info.lose++;
+        result= "You are loser.";
       }
       else
       {
-        result="You have chosen 'Paper' and Computer has chosen 'Rock'. You are winner.";
+        info.Win++;
+        result="You are winner.";
       }
-      document.querySelector('#game-result').innerText=result;
+      printResult('Paper', valueGivenByComputer, result);
     }
     function clickedScissor()
     {
@@ -75,18 +90,20 @@
       let result='';
       if(valueGivenByComputer=="Scissor")
       {
-        result= "Both of you have chosen 'Scissor'. No winner.";
+        info.Tie++;
+        result= "Match is tied.";
       }
       else if(valueGivenByComputer == "Paper")
       {
-        result= "You have chosen 'Scissor' and Computer has chosen 'Paper'. You are winner.";
+        info.Win++;
+        result= "You are winner.";
       }
       else
       {
-        result="You have chosen 'Scissor' and Computer has chosen 'Rock'. You are loser.";
+        info.lose++;
+        result="You are loser.";
       }
-      document.querySelector('#game-result').innerText=result;
-
+      printResult('Scissor', valueGivenByComputer, result);
     }
     
   </script> 
