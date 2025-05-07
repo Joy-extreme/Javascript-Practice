@@ -8,9 +8,15 @@
 </head>
 <body>
   <h2>Welcome to Rock paper Scissor Game</h2>
-  <button id="rock-button" class="button" onclick="clickedRock()">Rock</button>
-  <button id="paper-button" class="button" onclick="clickedPaper()">Paper</button>
-  <button id="scissor-button" class="button" onclick="clickedScissor()">Scissor</button>
+  <button id="rock-button" class="button" onclick="clickedRock()">
+    <img src="Images/Rock.png" alt="Rock">
+  </button>
+  <button id="paper-button" class="button" onclick="clickedPaper()">
+    <img src="Images/paper.jpg" alt="Paper">
+  </button>
+  <button id="scissor-button" class="button" onclick="clickedScissor()">
+    <img src="Images/Scissor.jpg" alt="Scissor">
+  </button><br>
   <button id="reset-button" class="button" onclick="reset()">Reset</button>
   <p id="game-result"></p>
   <script>
@@ -24,7 +30,7 @@
     };
     info.displayMatchSummary=function()
       {
-        return "\nTotal match played:"+(this.Win+this.Tie+this.lose)+"\nWon:"+this.Win+"\nLose:"+this.lose+"\nTie:"+this.Tie;
+        return "Total match played:"+(this.Win+this.Tie+this.lose)+"\nWon:"+this.Win+"\nLose:"+this.lose+"\nTie:"+this.Tie;
       };
     document.querySelector('#game-result').innerText=(scoreFromstorage)?info.displayMatchSummary():"Start the game";
 
@@ -39,7 +45,7 @@
     };
     info.displayMatchSummary=function()
       {
-        return "\nTotal match played:"+(this.Win+this.Tie+this.lose)+"\nWon:"+this.Win+"\nLose:"+this.lose+"\nTie:"+this.Tie;
+        return "Total match played:"+(this.Win+this.Tie+this.lose)+"\nWon:"+this.Win+"\nLose:"+this.lose+"\nTie:"+this.Tie;
       };
     }
     function clickByComputer()
@@ -62,7 +68,7 @@
     function printResult(yourMove, computerMove, result)
     {
       localStorage.setItem('Score', JSON.stringify(info));
-      document.querySelector('#game-result').innerText="You have chosen "+yourMove+" and computer has chosen "+computerMove+". "+result+ info.displayMatchSummary();
+      document.querySelector('#game-result').innerText="You have chosen "+yourMove+" and computer has chosen "+computerMove+". "+result+"\n"+ info.displayMatchSummary();
     }
     function clickedRock()
     {
