@@ -22,6 +22,10 @@ body
 {
   background-color: coral;
 }
+#reset-button
+{
+  background-color: goldenrod;
+}
 #game-result
 {
   font-weight: bold;
