@@ -1,10 +1,11 @@
-taskList= [];
+taskList= JSON.parse(localStorage.getItem('TaskList')) || [];
 printValue();
 function addValues()
 {
   let getTask= document.querySelector('#task').value;
   let getDate= document.querySelector('#date').value.toString();
   taskList.push({task:getTask, date:getDate});
+  localStorage.setItem('TaskList', JSON.stringify(taskList));
   printValue();
 }
 function printValue()
@@ -15,6 +16,7 @@ function printValue()
     html+=`<span>${taskList[i] ['task']}</span>
             <span>${taskList[i]['date']}</span>
             <button id="delete-button" class="todo-button" onclick="taskList.splice(${i}, 1);
+            localStorage.setItem('TaskList', JSON.stringify(taskList));
             printValue();
             ">Delete</button>
           `;
