@@ -12,16 +12,15 @@ function printValue()
   let containerElement= document.querySelector('#todo-container');
   let html='';
   for(let i=0;i<taskList.length;i++){
-    html+=`<div>
-            <span>${taskList[i]['task']}</span>
+    html+=`<span>${taskList[i] ['task']}</span>
             <span>${taskList[i]['date']}</span>
-            <button onclick="taskList.splice(${i}, 1);
+            <button id="delete-button" class="todo-button" onclick="taskList.splice(${i}, 1);
             printValue();
             ">Delete</button>
-          </div>\n`;
+          `;
 
   }
-  containerElement.innerHTML =  html;
+  containerElement.innerHTML = html;
   
   
 }
