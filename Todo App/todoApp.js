@@ -3,9 +3,17 @@ printValue();
 function addValues()
 {
   let getTask= document.querySelector('#task').value;
-  let getDate= document.querySelector('#date').value.toString();
-  taskList.push({task:getTask, date:getDate});
-  localStorage.setItem('TaskList', JSON.stringify(taskList));
+  let getDate= document.querySelector('#date').
+  value;
+  if(!getTask || !getDate)
+    {
+      alert(' Task or date value is not entered.');
+    }
+  else
+  {
+    taskList.push({task:getTask, date:getDate});
+    localStorage.setItem('TaskList', JSON.stringify(taskList));
+  }
   printValue();
 }
 function printValue()
