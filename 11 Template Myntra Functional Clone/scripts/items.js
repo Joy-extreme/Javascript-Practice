@@ -1,3 +1,5 @@
+const date = new Date();
+const options = { year: 'numeric', month: 'long', day: 'numeric' };
 items=[
   {
     id: 1,
@@ -8,6 +10,8 @@ items=[
     itemName: "Red dress",
     price: 1000,
     discount:25,
+    returnDays: 14,
+    date: date.toLocaleDateString('en-US', options),
   },
   {
     id: 2,
@@ -18,6 +22,8 @@ items=[
     itemName: "Women Padded Halter Neck Swimming Dress",
     price: 5000,
     discount: 30,
+    returnDays: 14,
+    date: date.toLocaleDateString('en-US', options),
   },
   {
     id: 3,
@@ -28,6 +34,8 @@ items=[
     itemName: "Women Red & White Printed A-Line Knee-Length Skirts",
     price: 100,
     discount: 20,
+    returnDays: 14,
+    date: date.toLocaleDateString('en-US', options),
   },
   {
     id: 4, 
@@ -38,6 +46,8 @@ items=[
     itemName: "Indian Cricket ODI Jersey",
     price: 1000,
     discount:25,
+    returnDays: 14,
+    date: date.toLocaleDateString('en-US', options),
   },
   {
     id: 5,
@@ -48,6 +58,8 @@ items=[
     itemName: "Pure Cotton T-shirt",
     price: 1000,
     discount:25,
+    returnDays: 14,
+    date: date.toLocaleDateString('en-US', options),
   },
   {
     id: 6,
@@ -58,6 +70,8 @@ items=[
     itemName: "Men ReactX Running Shoes",
     price: 1000,
     discount:0,
+    returnDays: 14,
+    date: date.toLocaleDateString('en-US', options),
   },
   {
     id: 7,
@@ -68,6 +82,8 @@ items=[
     itemName: "Men Slim Fit Regular Shorts",
     price: 1000,
     discount:25,
+    returnDays: 14,
+    date: date.toLocaleDateString('en-US', options),
   },
   {
     id: 8,
@@ -78,5 +94,7 @@ items=[
     itemName: "Men Fresh Deodrant 150ml",
     price: 1000,
     discount:25,
+    returnDays: 14,
+    date: date.toLocaleDateString('en-US', options),
   },
 ];
